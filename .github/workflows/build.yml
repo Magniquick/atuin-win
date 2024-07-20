@@ -1,8 +1,9 @@
-name: MSYS2 Setup
+name: Build Atuin
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: '0 0 * * 0'  # This runs the workflow every Sunday at midnight UTC
 defaults:
   run:
     shell: msys2 {0}
@@ -23,4 +24,3 @@ jobs:
         with:
           name: atuin
           path: C:\Users\runneradmin\.cargo\bin\atuin.exe
-          retention-days: 60
