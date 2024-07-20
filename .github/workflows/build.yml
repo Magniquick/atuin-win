@@ -17,10 +17,10 @@ jobs:
           msystem: UCRT64
       - run: pacman --noconfirm -Syu mingw-w64-ucrt-x86_64-rust mingw-w64-ucrt-x86_64-protobuf # protobuf is needed by atuin
       - uses: Swatinem/rust-cache@v2  
-      - run: cargo install atuin 
+      - run: cargo install --force atuin 
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v4
         with:
           name: atuin
           path: C:\Users\runneradmin\.cargo\bin\atuin.exe
-          retention-days: 30
+          retention-days: 60
