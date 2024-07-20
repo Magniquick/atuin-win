@@ -1,0 +1,20 @@
+name: MSYS2 Setup
+
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: msys2 {0}
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: msys2/setup-msys2@v2
+        with:
+          update: true
+          msystem: UCRT64
+      - run: |
+          echo hello world 
+          echo another line
