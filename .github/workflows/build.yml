@@ -16,5 +16,4 @@ jobs:
           update: true
           msystem: UCRT64
       - run: |
-          echo hello world 
-          echo another line
+          pacman -Syu mingw-w64-ucrt-x86_64-rust
