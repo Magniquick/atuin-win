@@ -16,5 +16,5 @@ jobs:
           update: true
           msystem: UCRT64
       - run: |
-          pacman --noconfirm -Syu mingw-w64-ucrt-x86_64-rust
+          pacman --noconfirm -Syu mingw-w64-ucrt-x86_64-rust mingw-w64-ucrt-x86_64-protobuf # protobuf is needed by atuin
           cargo install atuin 
